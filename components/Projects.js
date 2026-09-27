@@ -3,22 +3,25 @@ const projects = [
     number: "01",
     title: "Counter App",
     description:
-      "A React application that uses state and buttons to create an interactive counter.",
+      "A simple React application using state and button events to control a counter.",
     technologies: ["React", "JavaScript", "CSS"],
+    link: "https://mohammadhaseeb0110.github.io/Counter/",
   },
   {
     number: "02",
     title: "Quotes App",
     description:
-      "A React application that fetches quotes from an API and displays them on the page.",
+      "A React application that fetches and displays dynamic quotes from an API.",
     technologies: ["React", "Fetch API", "useEffect"],
+    link: "https://counter2-ten.vercel.app/",
   },
   {
     number: "03",
     title: "Tic Tac Toe",
     description:
-      "An interactive game built using React components, state and event handling.",
+      "An interactive game built with React using state and event handling.",
     technologies: ["React", "JavaScript", "CSS"],
+    link: "https://mohammadhaseeb0110.github.io/Tic-Tac-Toe/",
   },
 ];
 
@@ -43,10 +46,19 @@ export default function Projects() {
               <p>{project.description}</p>
 
               <div className="tags">
-                {project.technologies.map((tech) => (
-                  <span key={tech}>{tech}</span>
+                {project.technologies.map((technology) => (
+                  <span key={technology}>{technology}</span>
                 ))}
               </div>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View Project ↗
+              </a>
             </div>
 
             <div className="project-arrow">↗</div>
